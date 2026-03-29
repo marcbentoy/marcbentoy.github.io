@@ -1,0 +1,227 @@
+:root {
+    font-family: 'Jetbrains Mono', system-ui;
+    background-color: #0D1117;
+    color: #BEC6CF;
+    margin: 0;
+
+    --h1-color: #ff6b6b;
+    --h2-color: #feca57;
+    --h3-color: #1dd1a1;
+    --h4-color: #54a0ff;
+    --h5-color: #b088ff;
+    --h6-color: #576574;
+
+    --primary-color: #35393E;
+    --border-color: #35393E;
+
+    --primary-background: #0D1117;
+    --secondary-background: #010409;
+}
+
+.red {
+    color: var(--h1-color);
+}
+.green {
+    color: var(--h3-color);
+}
+.blue {
+    color: var(--h4-color);
+}
+.yellow {
+    color: var(--h2-color);
+}
+.purple {
+    color: var(--h5-color);
+}
+.grey {
+    color: var(--h6-color);
+}
+
+body {
+    margin: 0;
+    align-items: center;
+}
+
+.content {
+    margin: 0 auto 0 auto;
+    padding: 2rem;
+    max-width: 700px;
+}
+
+.recentBlogs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.cards.two-col {
+    grid-template-columns: 1fr 1fr;
+}
+
+.card {
+    border: 1px solid var(--border-color);
+}
+
+.card-title {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--secondary-background);
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.aboutContent {
+    display: flex;
+    border: 1px solid var(--border-color);
+}
+
+.aboutControls {
+    display: flex;
+}
+
+.aboutContentCode {
+    background-color: var(--secondary-background);
+    padding: 1rem;
+}
+
+.aboutContentPreview {
+    padding: 1rem;
+}
+
+.code-key {
+    color: var(--h1-color);
+}
+
+.code-value {
+    color: var(--h3-color);
+}
+
+.highlighter {
+    color: var(--h5-color);
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.active {
+    background-color: var(--secondary-background);
+    font-weight: bold;
+}
+
+button {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--primary-background);
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+    font-family: 'Jetbrains Mono', system-ui;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.4rem 1.4rem;
+}
+
+nav>a {
+    text-decoration: none;
+    color: #54a0ff;
+}
+
+nav>a:hover {
+    text-decoration: underline;
+}
+
+nav>a:not(:last-child)::after {
+    content: ".";
+    color: #BEC6CF;
+}
+
+a {
+    text-decoration: none;
+    color: var(--h4-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a>h3:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 1.3rem;
+    color: var(--h1-color);
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: var(--h2-color);
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: var(--h3-color);
+    margin: 0;
+}
+
+h4 {
+    font-size: 1.0rem;
+    color: var(--h4-color);
+    margin: 0;
+}
+
+h5 {
+    font-size: 1.0rem;
+    color: var(--h5-color);
+    margin: 0;
+}
+
+h6 {
+    font-size: 1.0rem;
+    color: var(--h6-color);
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    color: var(--h6-color);
+}
+
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px dashed var(--border-color);
+    margin-left: 16px;
+}
+
+.topSpacing {
+    margin-top: 2rem;
+}
+
+.footnote {
+    margin-top: 4rem;
+    text-align: center;
+    color: var(--h6-color);
+}

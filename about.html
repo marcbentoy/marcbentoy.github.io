@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Marc Bentoy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="content">
+        <nav>
+            <a href="marcbentoy">Marc</a><a href="blogs.html">blogs</a><a href="projects.html">projects</a><a
+                href="about.html">about</a><a href="now.html">now</a>;
+        </nav>
+
+        <div class="brand topSpacing">
+            <h1>Marc Vincent Bentoy</h1>
+            <h2>Software Engineer</h2>
+        </div>
+
+        <div class="aboutView topSpacing">
+            <div class="aboutControls">
+                <button class="code btn">Code</button>
+                <button class="preview btn active">Preview</button>
+            </div>
+
+            <div class="aboutContent">
+                <div id="code" class="aboutContentCode hidden">
+                    <p>.<span class="code-key">profession</span> = <span class="code-value">"Computer Engineer"</span>;
+                    </p>
+                    <p>.<span class="code-key">work</span>.<span class="code-key">position</span> = <span class="code-value">"Associate Backendk Engineer (Java)"</span>;</p>
+                    <p>.<span class="code-key">work</span>.<span class="code-key">company</span> = <span class="code-value">"Benifex"</span>;</p>
+                    <p>.<span class="code-key">interests</span> = [<span class="code-value">"Systems Design"</span>,
+                        <span class="code-value">"Web Development"</span>, <span class="code-value">"Optimization
+                            Methods"</span>, <span class="code-value">"Machine Learning"</span>, <span
+                            class="code-value">"Distributed Systems"</span>, <span class="code-value">"Minimal UI
+                            Design"</span>, <span class="code-value">"Writing"</span>];
+                    </p>
+                    <p>.<span class="code-key">location</span> = <span class="code-value">"Philippines, Cebu, Danao
+                            City"</span>;</p>
+                    <p>.<span class="code-key">email</span> = <span class="code-value">"marc.bentoy@gmail.com"</span>;
+                    </p>
+                    <p>.<span class="code-key">github</span> = <span class="code-value">"github/marcbentoy"</span>;</p>
+                </div>
+
+                <div id="preview" class="aboutContentPreview ">
+                    <p>A graduate of <span class="highlighter">Computer Engineer</span> and working as an <span
+                            class="highlighter">Associate Backend Engineer (Java)</span> at
+                        <span class="highlighter">Benifex</span>. Interested in systems design, web development,
+                        optimization methods, machine learning,
+                        distributed systems, minimal UI designs, and writing stuff – well, mostly writing code and
+                        sometimes blog articles 📝.
+                    </p>
+                    <br>
+                    <p> Have the same interests that you want to talk
+                        with me? You can reach me out by sending an email at <span
+                            class="highlighter">marc.bentoy@gmail.com</span>. Or view my public
+                        repos at <span class="highlighter">github/marcbentoy</span>.</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="footnote">© 2026 All rights reserved</p>
+
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll(".aboutControls .btn");
+        const codeContent = document.querySelector("#code");
+        const previewContent = document.querySelector("#preview");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                buttons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                if (button.classList.contains("code")) {
+                    codeContent.classList.remove("hidden");
+                    previewContent.classList.add("hidden");
+                    console.log("code clicked");
+                } else {
+                    previewContent.classList.remove("hidden");
+                    codeContent.classList.add("hidden");
+                    console.log("preview clicked");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
