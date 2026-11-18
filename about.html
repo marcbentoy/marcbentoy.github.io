@@ -1,102 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Marc Bentoy</title>
-
+  <meta name="theme-color" content="#0a121b">
+  <title>About | Marc Bentoy</title>
+  <meta name="description" content="Marc Vincent Bentoy, backend software engineer in Cebu, Philippines. Java/Spring Boot and Go services on GCP and Kubernetes.">
+  <meta property="og:title" content="About | Marc Bentoy">
+  <meta property="og:description" content="Marc Vincent Bentoy, backend software engineer in Cebu, Philippines. Java/Spring Boot and Go services on GCP and Kubernetes.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<div class="content">
-  <nav>
-    <a href=".">Marc</a>
-    <a href="blogs.html">blogs</a>
-    <a href="projects.html">projects</a>
-    <a href="about.html">about</a>
-    <a href="now.html">now</a>;
-  </nav>
+  <div class="band "><div class="wrap">
+    <header class="nav"><a class="brand" href="./">marc bentoy</a><nav aria-label="Main"><a href="projects.html">projects</a><a href="blogs.html">blogs</a><a href="about.html" aria-current="page">about</a><a href="now.html">now</a><a href="index.html#contact">contact</a><a href="resume.pdf">resume</a></nav></header>
+  </div></div>
+  <main>
+  <div class="band spacer"><div class="wrap">
 
-  <div class="brand topSpacing">
-    <h1>Marc Vincent Bentoy</h1>
-    <h2>Software Engineer</h2>
-  </div>
-
-  <div class="aboutView topSpacing">
-    <div class="aboutControls">
-      <button class="code btn">Code</button>
-      <button class="preview btn active">Preview</button>
-    </div>
-
-    <div class="aboutContent">
-      <div id="code" class="aboutContentCode hidden">
-        <p>.<span class="code-key">profession</span> = <span class="code-value">"Computer Engineer"</span>;
-        </p>
-        <p>.<span class="code-key">work</span>.<span class="code-key">position</span> = <span class="code-value">"Associate Backendk Engineer (Java)"</span>;</p>
-        <p>.<span class="code-key">work</span>.<span class="code-key">company</span> = <span class="code-value">"Benifex"</span>;</p>
-        <p>.<span class="code-key">interests</span> = [<span class="code-value">"Systems Design"</span>,
-          <span class="code-value">"Web Development"</span>, <span class="code-value">"Optimization
-                            Methods"</span>, <span class="code-value">"Machine Learning"</span>, <span
-              class="code-value">"Distributed Systems"</span>, <span class="code-value">"Minimal UI
-                            Design"</span>, <span class="code-value">"Writing"</span>];
-        </p>
-        <p>.<span class="code-key">location</span> = <span class="code-value">"Philippines, Cebu, Danao
-                            City"</span>;</p>
-        <p>.<span class="code-key">email</span> = <span class="code-value">"marc.bentoy@gmail.com"</span>;
-        </p>
-        <p>.<span class="code-key">github</span> = <span class="code-value">"github/marcbentoy"</span>;</p>
+  </div></div>
+  <div class="band "><div class="wrap"><i class="x tl" aria-hidden="true"></i>
+    <header class="page-head">
+      <h1>About</h1>
+      <p>Backend engineer, Computer Engineering graduate, occasional writer.</p>
+    </header>
+  </div></div>
+  <div class="band "><div class="wrap">
+    <div class="pad" style="display:flex;flex-direction:column;gap:22px">
+      <div class="seg" role="tablist" aria-label="About view">
+        <button role="tab" id="tab-preview" aria-controls="panel-preview" aria-selected="true" type="button">preview</button>
+        <button role="tab" id="tab-code" aria-controls="panel-code" aria-selected="false" type="button">code</button>
       </div>
-
-      <div id="preview" class="aboutContentPreview ">
-        <p>A graduate of <span class="highlighter">Computer Engineer</span> and working as an <span
-            class="highlighter">Associate Backend Engineer (Java)</span> at
-          <span class="highlighter">Benifex</span>. Interested in systems design, web development,
-          optimization methods, machine learning,
-          distributed systems, minimal UI designs, and writing stuff – well, mostly writing code and
-          sometimes blog articles 📝.
-        </p>
-        <br>
-        <p> Have the same interests that you want to talk
-          with me? You can reach me out by sending an email at <span
-              class="highlighter">marc.bentoy@gmail.com</span>. Or view my public
-          repos at <span class="highlighter">github/marcbentoy</span>.</p>
+      <div id="panel-preview" role="tabpanel" aria-labelledby="tab-preview" class="prose">
+        <p>I'm a Computer Engineering graduate working as an <b>Associate Backend Engineer (Java)</b> at <b>Benifex</b> in Cebu.</p>
+        <p>I'm interested in systems design, distributed systems, web development, optimization methods, machine learning, minimal UI design, and writing. Mostly code, sometimes blog posts.</p>
+        <p>Share any of those interests? Email me at <a href="mailto:marc.bentoy@gmail.com">marc.bentoy@gmail.com</a> or browse my repos on <a href="https://github.com/marcbentoy">GitHub</a>.</p>
       </div>
+      <pre id="panel-code" role="tabpanel" aria-labelledby="tab-code" class="code" style="overflow-x:auto" hidden>.<span class="f">profession</span> = <span class="s">"Computer Engineer"</span>;
+.<span class="f">work</span>.<span class="f">position</span> = <span class="s">"Associate Backend Engineer (Java)"</span>;
+.<span class="f">work</span>.<span class="f">company</span> = <span class="s">"Benifex"</span>;
+.<span class="f">interests</span> = [
+    <span class="s">"Systems Design"</span>, <span class="s">"Distributed Systems"</span>,
+    <span class="s">"Web Development"</span>, <span class="s">"Optimization Methods"</span>,
+    <span class="s">"Machine Learning"</span>, <span class="s">"Minimal UI Design"</span>,
+    <span class="s">"Writing"</span>
+];
+.<span class="f">location</span> = <span class="s">"Danao City, Cebu, Philippines"</span>;
+.<span class="f">email</span> = <span class="s">"marc.bentoy@gmail.com"</span>;
+.<span class="f">github</span> = <span class="s">"github.com/marcbentoy"</span>;</pre>
     </div>
-  </div>
-
-  <p class="footnote">© 2026 All rights reserved</p>
-
-</div>
-
 <script>
-  const buttons = document.querySelectorAll(".aboutControls .btn");
-  const codeContent = document.querySelector("#code");
-  const previewContent = document.querySelector("#preview");
-
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      buttons.forEach(btn => btn.classList.remove("active"));
-      button.classList.add("active");
-
-      if (button.classList.contains("code")) {
-        codeContent.classList.remove("hidden");
-        previewContent.classList.add("hidden");
-        console.log("code clicked");
-      } else {
-        previewContent.classList.remove("hidden");
-        codeContent.classList.add("hidden");
-        console.log("preview clicked");
-      }
+  (function () {
+    var tabs = document.querySelectorAll(".seg button");
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute("aria-selected", on ? "true" : "false");
+          document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+        });
+      });
     });
-  });
+  })();
 </script>
-</body>
+  </div></div>
+  </main>
+  <div class="band "><div class="wrap"><i class="x tl" aria-hidden="true"></i>
+    <footer class="foot"><span>&copy; 2026 Marc Vincent Bentoy</span><span>Cebu, Philippines &middot; UTC+8</span></footer>
+  </div></div>
+  <div class="band spacer sm"><div class="wrap">
 
+  </div></div>
+<script src="nav.js"></script>
+</body>
 </html>

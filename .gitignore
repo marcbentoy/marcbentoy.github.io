@@ -1,1 +1,14 @@
-.idea
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local tooling (wrangler, node)
+.wrangler/
+node_modules/
+.env
+.dev.vars
