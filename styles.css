@@ -237,6 +237,12 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding: var(--s1);
 }
 
+/* ---------- Coming-soon projects: a pill on the illustration frame ---------- */
+.cell.soon .ill-frame { position: relative; padding-top: calc(var(--s4) + var(--s-half)); }
+.soon-tag { position: absolute; top: var(--s1); right: var(--s1); display: inline-flex; align-items: center; gap: 6px; background: var(--accent-bg); }
+.soon-tag::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); animation: status-pulse 2s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) { .soon-tag::before { animation: none; } }
+
 /* ---------- Illustration motion: slow by default; anim.js speeds a card up on hover ---------- */
 .ill .flow { stroke-dasharray: 4 4; animation: ill-flow 2.4s linear infinite; }
 .ill .beat { transform-box: fill-box; transform-origin: center; animation: ill-beat 3s ease-in-out infinite; }
