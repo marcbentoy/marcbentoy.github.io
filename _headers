@@ -1,0 +1,17 @@
+# Cloudflare Pages response headers. Docs: https://developers.cloudflare.com/pages/configuration/headers/
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# CSS/JS aren't fingerprinted, so let browsers revalidate rather than cache for a long time.
+/*.css
+  Cache-Control: public, max-age=3600, must-revalidate
+/*.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Keep preview deployments (*.pages.dev) out of search results.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
