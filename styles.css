@@ -193,6 +193,19 @@ ul { margin: 0; padding: 0; list-style: none; }
 .contact h2 { font-size: clamp(1.6rem, 3.4vw, 2.1rem); letter-spacing: -0.03em; }
 .contact p { color: var(--dim); max-width: 60ch; }
 
+/* Arriving from a #contact link (nav.js adds .flash): the band lights up and the headline tints */
+/* Each fades in, holds briefly, then fades out; ease-in-out on every leg keeps both ends soft. */
+.contact.flash { animation: section-flash 2.2s ease-in-out; }
+.contact.flash h2 { animation: headline-tint 2.2s ease-in-out; }
+@keyframes section-flash {
+  0%, 100% { background-color: rgba(77, 184, 255, 0); box-shadow: inset 0 0 0 1px rgba(77, 184, 255, 0); }
+  30%, 50% { background-color: var(--accent-soft); box-shadow: inset 0 0 0 1px var(--accent-line); }
+}
+@keyframes headline-tint {
+  0%, 100% { color: var(--text); }
+  30%, 50% { color: var(--accent-ink); }
+}
+
 /* ---------- Footer ---------- */
 .foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--s1) var(--s3); padding: var(--s3) var(--s5); font-family: var(--font-mono); font-size: 0.75rem; color: var(--faint); }
 
